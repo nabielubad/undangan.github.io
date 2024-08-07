@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambil Query String</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+    <script>
+        // Ambil query string dari URL
+        const queryString = window.location.search;
+
+        // Buat objek URLSearchParams
+        const urlParams = new URLSearchParams(queryString);
+
+        // Ambil nilai parameter yang diinginkan
+        const nilai = urlParams.get('parameter');
+
+        // Tampilkan nilai di elemen dengan id="result"
+        document.getElementById('result').textContent = nilai ? nilai : 'Parameter tidak ditemukan';
+    </script>
+</body>
+
+</html>
